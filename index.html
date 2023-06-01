@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="lv" data-theme="light" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Liels projekt</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" defer></script>
+<style>
+body {
+background-color: #b3b3b3; /* Цвет фона */
+background-image: url(path/to/image.jpg); /* Изображение в качестве фона */
+background-repeat: no-repeat; /* Отключение повторения фонового изображения */
+background-size: cover; /* Масштабирование фонового изображения для заполнения всей страницы */
+}
+
+/* body {
+background-color: #5c469c; 
+background-image: url(path/to/image.jpg); 
+background-repeat: no-repeat;
+background-size: cover; 
+ } */
+
+ body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.small-svg {
+width: 50px; /* Установите нужную ширину */
+height: auto; /* Высота автоматически рассчитывается пропорционально ширине */
+}
+
+#toggle-theme[type="checkbox"] {
+transform: scale(1.0); /* Измените значение масштабирования по вашему выбору */
+}
+
+/* .rectangle-container input[type="checkbox"] {
+  transform: scale(5.0); 
+} */
+
+.rectangle-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 9px;
+}
+
+/* .rectangle-container {
+  width: 200px;
+  height: 65px; 
+  background-color: #0c134f;
+  padding: 10px; 
+  border-radius: 20px; 
+  margin-bottom: 30px; 
+  transition: background-color 0.5s ease;
+} */
+
+.ck-container {
+  width: 155px; /* Ширина контейнера */
+  height: 30px; /* Высота контейнера */
+  background-color: #5c469c; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 15px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+}
+
+.container .checkbox-text {
+  padding-left: 15px; /* Левый отступ */
+  padding-right: 15px; /* Правый отступ */
+}
+
+.main-question {
+  text-align: center;
+  margin-bottom: 20px; /* Пробел между вопросом и контейнерами */
+}
+
+.main-question h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.main-questions h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.dark-theme {
+  background-color: #1d267d; /* Цвет фона в темном режиме */
+  color: #ffffff; /* Цвет текста в темном режиме */
+  /* Добавьте другие стили для элементов в темном режиме */
+}
+
+.container.dark-theme {
+  background-color: #5c469c;
+}
+
+html[data-theme="light"] {
+  --primary-color: rgb(255, 255, 255);
+  --light-opacity: 1;
+  --night-opacity: 0;
+}
+
+html[data-theme="dark"] {
+  --primary-color: rgb(0, 0, 0);
+  --light-opacity: 0;
+  --night-opacity: 1;
+}
+
+.light-mode .container {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode .container {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#nepareiz {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+} 
+
+#nepareizi {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+} 
+
+#nepareizis {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+} 
+
+#pareiz {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+} 
+
+/*---------------------------------------------------------------*/
+
+
+#nepravilno {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+} 
+
+#pravilniy {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+} 
+
+#nepravilniy {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+} 
+
+#net {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+} 
+
+/*---------------------------------------------------------------*/
+
+#wrong {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+} 
+
+#wrongs {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+} 
+
+#right {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+} 
+
+#wronge {
+  width: 500px; /* Ширина контейнера */
+  height: 65px; /* Высота контейнера */
+  background-color: #0c134f; /* Цвет фона контейнера */
+  padding: 10px; /* Отступы внутри контейнера */
+  border-radius: 20px; /* Радиус сглаживания углов */
+  margin-bottom: 30px; /* Пробел между контейнерами внизу */ 
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  text-align: center;
+}
+
+
+
+
+
+
+/* body {
+  text-align: center;
+} */
+
+
+
+</style>
+  
+  
+  <svg class="small-svg" viewBox="0 0 200 200"> <!-- Добавьте класс и viewBox к вашему элементу svg -->
+    <!-- Ваше содержимое SVG -->
+  </svg>
+  
+</head>
+<body>
+
+  
+  <header>
+    <input type="checkbox" id="toggle-theme" class="icon" onclick="toggleTheme()">
+    <img src="sun.svg" alt="Sun" class="small-svg" id="sunIcon">
+    <img src="moon.svg" alt="Moon" class="small-svg" id="moonIcon">
+  </header>
+  
+    
+    <main>
+      <div class="main-question">
+      <h1>Kurš galamērķis atrodas uz 17 508 salām?</h1>
+      </div>
+      <div class="container">
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="nepareiz" onclick="changeColors()">Igaunija</span>
+        </div>
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="nepareizi" onclick="changeColoris()">Lielbritānija</span>
+        </div>
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="nepareizis" onclick="changeColo()">Liepāja</span>
+        </div>
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="pareiz" onclick="changeColor()">Indonēzija</span>
+        </div>       
+    </div>
+
+      <div class="main-question">
+      <h1>Kurš galamērķis ir vienlaicīgi gan kontinents, gan valsts?</h1>
+      </div>
+      <div class="container">
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="nepravilno" onclick="changeCvet()">Liepāja </span>
+        </div>
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="pravilniy" onclick="changeCvets()">Austrālija</span>
+        </div>
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="nepravilniy" onclick="changeCvetek()">Lietuva</span>
+        </div>
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="net" onclick="changeCvetok()">Kanāda</span>
+        </div>
+      </div>
+        <div class="main-question">
+          <h1>Pie kura galamērķa ir īpašī aizsargājama ūdensputnu ligzdošanas teritorija, kas iekļauta "Natura 2000"?</h1>
+        </div>
+        <div class="container">
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="wrong" onclick="changeKrases()">Lībija</span>
+        </div>
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="wrongs" onclick="changeKrase()">Ķīna</span>
+        </div>
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="right" onclick="changeKrasa()">Liepāja</span>
+        </div>
+        <div class="rectangle-container">
+          <span class="checkbox-text" id="wronge" onclick="changeKrasi()">Čīle</span>
+        </div>
+    </main> 
+
+    
+
+    <!-- <main>
+      <h1>Kurš galamērķis atrodas uz 17 508 salām?</h1>
+      <label>
+        <inpu type="checkbox" />
+        Igaunija
+      </label>
+      <label>
+        <inpu type="checkbox" />
+        Lielbritānija
+      </label>
+      <label>
+        <inpu type="checkbox" />
+        Liepāja
+      </label>
+      <label>
+        <inpu type="checkbox" />
+        Indonēzija
+      </label>
+    </main> -->
+</body>
+</html>
